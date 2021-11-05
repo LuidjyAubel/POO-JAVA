@@ -10,7 +10,9 @@ public class Main {
 		System.out.println("Vous êtes dans une "+PI1.getType());
 		System.out.println("le Zombie n° "+Z1.getId()+" est de type : "+Z1.getType()+" avec "+Z1.getVie()+" point de vie");
 		P1.attaqueZ(Z1);
+		P2.attaqueZ(Z2);
 		System.out.println(Z1.getVie());
+		System.out.println(Z2.getVie());
 		/*P1.parler();*/
 	}
 
