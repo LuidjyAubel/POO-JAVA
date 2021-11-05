@@ -1,3 +1,4 @@
+import java.util.*;
 public class Personne {
 	private String nom;
 	private String prenom;
@@ -50,19 +51,24 @@ public class Personne {
 		}
 		if (cpt == 0) {
 			System.out.print(this.prenom+" "+this.nom+ " viens de se transformé en rodeur !");
-			
 		}
-		
 	}
 	
 	public void attaqueP(Personne perso) {
-			System.out.print(this.getPrenom()+" à attaqué le personnage : "+perso.getNom());
-			perso.vie = getVie()-2;
-			
+			System.out.println(this.getPrenom()+" à attaqué "+perso.getPrenom());
+			perso.vie = getVie()-2;	
 		}
+	public void attaqueZ(Zombie Zomb) {
+		System.out.println(this.getPrenom()+" à attaqué le zombie n° "+Zomb.getId()+" de type : "+Zomb.getType());
+		Zomb.setVie(Zomb.getVie()-2);
+	}
+	public void parler() {
+		Scanner S1 = new Scanner(System.in);
+		System.out.print("écrire ce que vous avez à dire");
+		String t = S1.nextLine();
+		System.out.print(this.prenom+" à dit :"+t);
+	}
 	public static void main(String[] args) {
-		Personne P3 = new Personne("Grimes", "Carl", 16);
-		
 		
 	}
 
